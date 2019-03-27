@@ -104,7 +104,11 @@ function submitLetter(pressedLetter,letterButton){
 		$(letterButton).addClass('disabled correct');
 	}
 	else{
-		$(letterButton).addClass("disabled incorrect")
+		if(!$(letterButton).hasClass('disabled correct')){
+			$(letterButton).addClass("disabled incorrect")
+		}
+
+
 	}
 
 	if(totalRemainingBlanks < 1){
